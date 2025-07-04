@@ -2,22 +2,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Resume</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-  <div contenteditable="true" id="resume">
-    <h1>Your Name</h1>
-    <h3>Professional Title</h3>
-    <p>Email: your@email.com</p>
-    <p>Experience: ...</p>
-    <p>Skills: Verilog, VHDL, Python</p>
+  <div class="container">
+    <div id="resume" contenteditable="true">
+      <h1 class="name">Aitha Dinesh</h1>
+      <h2 class="title">VLSI Design Engineer | Verilog Specialist</h2>
+
+      <section>
+        <h3>Contact</h3>
+        <p>Email: aithadinesh@example.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>Location: Ongole, Andhra Pradesh, India</p>
+      </section>
+
+      <section>
+        <h3>Professional Summary</h3>
+        <p>Experienced VLSI engineer with strong skills in RTL design, Verilog, and digital logic design. Passionate about creating efficient and scalable designs from logic to layout.</p>
+      </section>
+
+      <section>
+        <h3>Skills</h3>
+        <ul>
+          <li>Verilog, VHDL, SystemVerilog</li>
+          <li>RTL to GDSII flow</li>
+          <li>Synthesis, Static Timing Analysis</li>
+          <li>Digital Design, ASIC, FPGA</li>
+          <li>Python, Shell Scripting</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Projects</h3>
+        <ul>
+          <li><strong>Full Adder Design:</strong> RTL implementation of 1-bit and 4-bit adders using Verilog.</li>
+          <li><strong>Multiplexer Module:</strong> 2:1 and 4:1 mux designs with testbenches.</li>
+          <li><strong>ALU Design:</strong> Arithmetic Logic Unit with multiple operations (ADD, SUB, AND, OR).</li>
+          <li><strong>SRAM Controller:</strong> Custom memory controller interfacing with external SRAM.</li>
+          <li><strong>VLSI Portfolio Website:</strong> Personal site hosted on GitHub Pages with resume and project links.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <p><strong>B.Tech in Electronics and Communication Engineering</strong><br/>
+        XYZ Engineering College, JNTU Kakinada</p>
+      </section>
+    </div>
+
+    <div class="buttons">
+      <button onclick="downloadDoc()">Download as Word</button>
+      <button onclick="downloadText()">Download as Text</button>
+      <button onclick="downloadPDF()">Download as PDF</button>
+    </div>
   </div>
-  <button onclick="downloadDoc()">Download as Word</button>
-  <button onclick="downloadText()">Download as Text</button>
-  <button onclick="downloadPDF()">Download as PDF</button>
+
   <script src="scripts/resume.js"></script>
 </body>
 </html>
